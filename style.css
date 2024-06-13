@@ -1,0 +1,127 @@
+/* Load google font */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Krona+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+/* Diagnostic */
+* {
+  outline: 1px solid blue;
+}
+
+/* Style tyle with css variables */
+:root {
+  --color1: #E3E4D6;
+  --color2: #7E0000;
+  --color3: #0E5630;
+  --font1: "Iceland", sans-serif;;
+  --font2: "Krona One", sans-serif;
+}
+
+
+
+/* wrapper */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: var(--font2);
+  background: var(--color3);
+    
+}
+
+article {
+  /*   background image   */
+    background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+/* on hover left column, no background image */
+article: hover {
+  background-image: none;
+}
+
+h1, p {
+ animation-name: fadeInDownBig;
+ animation-duration: 1s; 
+ animation-iteration-count: 1s; 
+ animation-delay: 1s;
+ animation-fill-mode: backwards; 
+ color: var(--color1);
+
+  
+}
+
+p {
+  animation-delay: 3s;
+  color: var(--color1);
+  
+}
+
+h2{
+  color: black;
+}
+
+/* article */
+article {
+  display: flex;
+  flex-direction: column;
+/*  main axis  */
+  justify-content: center;
+/*   cross axis   */
+  align-items: center;
+  
+    
+}
+
+
+
+/* aside image */
+aside img {
+  width: 100%;
+  max-width: 100%;
+  
+/*  Full height  */
+  
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Drop Cap */
+p span {
+  float: left;
+  font-size: 5em;
+  color: var(--color2);
+}
+
+@media (max-width: 480px ) {
+  
+  body{
+    background: var(--color);
+  }
+  
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  article nav a {
+    display: block;
+    margin: 1em 0 1em 0;
+  }
+  
+  p span {
+    float: none;
+    font-size: 1.5em;
+  }
+  
+}
+
+img{
+  width: 40px;
+  padding: 20px;
+    
+  
+}
+
+a{
+  color: var(--color3);
+}
